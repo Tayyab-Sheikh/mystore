@@ -1,7 +1,11 @@
 {
   "name": "mystore",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "This is Grocery Store",
+=======
+  "description": "This is grocery store",
+>>>>>>> 7b49198 (create node server)
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -10,7 +14,11 @@
     "type": "git",
     "url": "git+https://github.com/Tayyab-Sheikh/mystore.git"
   },
+<<<<<<< HEAD
   "author": "Sarah",
+=======
+  "author": "Tayyab",
+>>>>>>> 7b49198 (create node server)
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Tayyab-Sheikh/mystore/issues"
