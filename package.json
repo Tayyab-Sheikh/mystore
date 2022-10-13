@@ -1,0 +1,24 @@
+{
+  "name": "mystore",
+  "version": "1.0.0",
+  "description": "This is grocery store",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tayyab-Sheikh/mystore.git"
+  },
+  "author": "Tayyab",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tayyab-Sheikh/mystore/issues"
+  },
+  "homepage": "https://github.com/Tayyab-Sheikh/mystore#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.5",
+    "nodemon": "^2.0.20"
+  }
+}
