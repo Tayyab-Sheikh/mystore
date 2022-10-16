@@ -1,33 +1,37 @@
 const mongoose = require(`mongoose`);
 
-const adminSchema = new mongoose.Schema({
+const outletSchema = new mongoose.Schema({
 
   _id:{
     type:mongoose.Types.ObjectId
   },
-  name:{
+  admin:{
+    type:mongoose.Types.ObjectId
+  },
+  outletName: {
     type:String,
     uppercase:true,
     required:true
   },
-  email:{
+  location:{
     type:String,
+    uppercase:true,
     required:true
   },
-  password:{
+  city:{
     type:String,
+    uppercase:true,
     required:true
   },
-  contactNumber:{
+  outletContactNumber:{
     type:Number,
     required:true
   },
-  systemRole:{
+  outletEmail:{
     type:String,
-    uppercase:true,
-    default:`ADMIN`
+    require:true
   }
 
 });
 
-module.exports = mongoose.model(`admins`,adminSchema);
+module.exports = mongoose.model(`outlets`,outletSchema);

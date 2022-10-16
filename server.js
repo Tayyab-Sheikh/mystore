@@ -1,5 +1,6 @@
 const express = require(`express`);
 const mongoose = require(`mongoose`);
+const adminRouter = require(`./api/routers/admin`);
 
 const PORT = 3000;
 
@@ -12,5 +13,7 @@ app.listen(PORT,() =>{
 app.get(`/`, (req,res) =>{
   res.send(`<h1>Services are Running</h1>`)
 });
+
+app.use(`/admin`,adminRouter);
 
 mongoose.connect(`mongodb+srv://sarahasim4:123Jigsaw123@grocerystore.zwedtr5.mongodb.net/?retryWrites=true&w=majority`).then(resullt => console.log(`Database Connected`)).catch(err =>console.log(err));
