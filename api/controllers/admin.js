@@ -1,14 +1,18 @@
 // import admin schema from model
 const Admin = require(`../models/admin`);
+const mongoose = require(`mongoose`);
 
 // controller to save admin to database/mongodb
 const saveAdmin = async (req,res,next) => {
 
   try {
 
+    console.log(req.body);
+
     const { name, email, password, contactNumber } = req.body;
 
     const admin = new Admin({
+      _id:mongoose.Types.ObjectId(),
       name:name,
       email:email,
       password:password,

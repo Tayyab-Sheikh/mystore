@@ -28,6 +28,8 @@ const adminSchema = new mongoose.Schema({
     default:`ADMIN`
   }
 
+},{
+  _id:true
 });
 
 module.exports = mongoose.model(`admins`,adminSchema);
