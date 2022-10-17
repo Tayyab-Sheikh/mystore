@@ -13,6 +13,20 @@ const adminSchema = new mongoose.Schema({
         unique:true
     },
     password:{
-        type:String
+        type:String,
+        required:true
+    },
+    ContactNumber:{
+        type:String,
+        required:true
+    },
+    
+    systemRole:{
+        type:String,
+        uppercase:true,
+        default:`ADMIN`
     }
+
 });
+
+module.exports = mongoose.model(`admins`,adminSchema);
