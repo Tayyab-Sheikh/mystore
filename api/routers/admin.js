@@ -1,8 +1,8 @@
 const express = require(`express`);
-const {saveAdmin }= require(`../controllers/admin`);
-const adminRouter= express.Router();
+const { saveAdmin } = require(`../controllers/admin`);
 
-adminRouter.post(`/`,saveAdmin);
+const adminRouter = express.Router();
 
-module.exports= adminRouter;
+adminRouter.post(`/`, saveAdmin);
 
+module.exports = adminRouter;
