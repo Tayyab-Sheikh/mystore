@@ -1,19 +1,22 @@
 //import admin schema from model
-const Admin = require(`../models/admin`);
+const Outlet = require(`../models/outlet`);
 const mongoose = require(`mongoose`);
 
 //controller to save admin to database/mongodb
 //asyn for api call
-const saveAdmin = async (req,res,next) => {
+const saveOutletdata = async (req,res,next) => {
     try{
         
-    const {name,email,password,ContactNumber} = req.body; 
-    const admin = new Admin({
+    const {admin,outletName,location,city,outletContactNumber,outletEmail} = req.body; 
+    const outlet = new Outlet({
         _id:mongoose.Types.ObjectId(),
-        name:name,
-        email:email,
-        password:password,
-        ContactNumber:ContactNumber
+        admin:mongoose.Types.ObjectId(admin),
+        outletName:outletName,
+        location:location,
+        city:city,
+        outletContactNumber:outletContactNumber,
+        outletEmail:outletEmail
+        
     });
 
     const result = await admin.save();
@@ -22,7 +25,7 @@ const saveAdmin = async (req,res,next) => {
         return res.status(201).json({
             hasError:false,
             message:`Requested api successful`,
-            data:result.name
+            data:result.outletName
         });
     }
     } catch(error){
@@ -36,5 +39,5 @@ const saveAdmin = async (req,res,next) => {
 }
 
     module.exports={
-        saveAdmin
+        saveOutletdata
     }

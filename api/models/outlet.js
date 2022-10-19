@@ -8,8 +8,8 @@ const outletSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId
     },
     outletName: {
-        typeString:String,
-        uppercase:true,
+        type:String,
+        // uppercase:true,
         required:true
     },
     location:{
@@ -31,4 +31,4 @@ const outletSchema = new mongoose.Schema({
         required:true
     }
 });
-module.exports = mongoose.model(`outlets`,OutletSchema);
+module.exports = mongoose.model(`outlets`,outletSchema);
