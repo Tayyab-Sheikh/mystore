@@ -19,7 +19,6 @@ app.get(`/`, (req,res) =>{
 });
 
 app.use(`/admin`,adminRouter);
-app.use(`/outlet`,outletRouter);
+app.use(`/outlet`, outletRouter);
 
-mongoose.connect(`mongodb+srv://sarahasim4:123Jigsaw123@grocerystore.zwedtr5.mongodb.net/?retryWrites=true&w=majority`).then(result => console.log(`Database Connected`)).catch(err =>console.log(err));
-
+mongoose.connect(`mongodb+srv://sarahasim4:123Jigsaw123@grocerystore.zwedtr5.mongodb.net/?retryWrites=true&w=majority`).then(resullt => console.log(`Database Connected`)).catch(err =>console.log(err));

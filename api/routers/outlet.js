@@ -1,8 +1,8 @@
 const express = require(`express`);
-const {saveOutletdata }= require(`../controllers/outlet`);
+const { saveOutletData } = require(`../controllers/outlet`);
+
 const outletRouter = express.Router();
 
-outletRouter.post(`/`,saveOutletdata);
+outletRouter.post(`/`, saveOutletData);
 
-module.exports= outletRouter;
-
+module.exports = outletRouter;
